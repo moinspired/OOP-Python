@@ -1,0 +1,17 @@
+class Fraction(object):
+    def __init__(self, num, denom):
+        assert type(num) == int and type(denom)
+        self.num = num
+        self.denom = denom
+    def __add__(self, other):
+        top = self.num*other.denom + other.num*self.denom
+        bottom = self.denom * other.denom
+        return Fraction(top, bottom)
+    def __sub__():
+        top = self.num*other.denom + other.num*self.denom
+        bottom = self.denom * other.denom
+        return Fraction(top, bottom)
+    def inverse(self):
+        return Fraction(self.denom, self.num)
+    def __str__(self):
+        return str(self.num) + " / " + str(self.denom)
